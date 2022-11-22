@@ -1,0 +1,78 @@
+{
+    "Players": {
+        "1": {
+            "number": "P_1",
+            "first_name": "Sofiane",
+            "last_name": "M.L",
+            "date_of_birth": "22/10/1994",
+            "sex": "M",
+            "rank": 0,
+            "score": 0
+        },
+        "2": {
+            "number": "P_2",
+            "first_name": "Anas",
+            "last_name": "Aamoum",
+            "date_of_birth": "01/01/1988",
+            "sex": "M",
+            "rank": 0,
+            "score": 0
+        },
+        "3": {
+            "number": "P_3",
+            "first_name": "Garry",
+            "last_name": "Kasparov",
+            "date_of_birth": "13/04/1963",
+            "sex": "M",
+            "rank": 0,
+            "score": 0
+        },
+        "4": {
+            "number": "P_4",
+            "first_name": "Bobby",
+            "last_name": "Fischer",
+            "date_of_birth": "09/03/1943",
+            "sex": "M",
+            "rank": 0,
+            "score": 0
+        }
+    },
+    "Tournament": {
+        "1": {
+            "tournament_name": "Championnat du monde d'echecs",
+            "tournament_place": "Paris",
+            "tournament_start_date": "16/11/2022",
+            "tournament_end_date": "23/11/2022",
+            "time_control": "time_control",
+            "description": "description",
+            "number_round": 2,
+            "players": [
+                "[Sofiane M.L, 0]",
+                "[Anas Aamoum, 0]",
+                "[Garry Kasparov, 0]",
+                "[Bobby Fischer, 0]"
+            ],
+            "rounds": [
+                {
+                    "round_name": "Round initial",
+                    "start_date_time": "8:00 a.m",
+                    "end_date_time": "11:00 a.m",
+                    "number": 1,
+                    "games": [
+                        "([Sofiane M.L, 0],[Garry Kasparov, 0])",
+                        "([Anas Aamoum, 0],[Bobby Fischer, 0])"
+                    ]
+                },
+                {
+                    "round_name": "1/8 de final",
+                    "start_date_time": "1:00 p.m",
+                    "end_date_time": "03:00 p.m",
+                    "number": 2,
+                    "games": [
+                        "([Sofiane M.L, 0],[Garry Kasparov, 0])"
+                    ]
+                }
+            ]
+        }
+    }
+}
