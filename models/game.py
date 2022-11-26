@@ -23,7 +23,14 @@ class Game:
 
     def __str__(self):
         """Used in print."""
-        return f"({self.player_1},{self.player_2})"
+        return f"{self.player_1} vs {self.player_2}"
+
+
+    def deserialize_game(self):
+        return self
+
+
+
 
 
 

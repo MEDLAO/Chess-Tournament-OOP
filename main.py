@@ -1,16 +1,34 @@
-# This is a sample Python script.
+from models.player import Player
+from models.tournament import Tournament
 
-# Press ⌃R to execute it or replace it with your code.
-# Press Double ⇧ to search everywhere for classes, files, tool windows, actions, and settings.
+# Load players from the database
+Player.deserialize_players()
+print("My all players:")
+for player in Player.get_all_players():
+    print(player)
+print("-------------------------")
+all_ts = Tournament.deserialize_tournaments()
+t1 = all_ts[0]
+print(t1)
+for player in t1.tournament_players:
+    print(player)
+print("-------------------------")
+for round in t1.tournament_rounds:
+    print("-------------------------")
+    print(round)
+
+    for game in round.games:
+        print(game)
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press ⌘F8 to toggle the breakpoint.
+# print("Ajouter un joueur:")
+# fn = input("First Name: ")
+# ln = input("Last Name: ")
+# Player(first_name=fn, last_name=ln)
+#
+# print("-------------------------")
+# print("My all players:")
+# for player in Player.get_all_players():
+#     print(player)
 
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/

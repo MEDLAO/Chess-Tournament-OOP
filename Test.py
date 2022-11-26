@@ -6,10 +6,11 @@ from tinydb import TinyDB
 import json
 
 
-sofiane = Player("Sofiane", "M.L", "22/10/1994", "M", 0, 0)
-anas = Player("Anas", "Aamoum", "01/01/1988", "M", 0, 0)
-kasparov = Player("Garry", "Kasparov", "13/04/1963", "M", 0, 0)
-fischer = Player("Bobby", "Fischer", "09/03/1943", "M", 0, 0)
+sofiane = Player("Sofiane", "M.L")
+anas = Player("Anas", "Aamoum")
+kasparov = Player("Garry", "Kasparov")
+fischer = Player("Bobby", "Fischer")
+nakamura = Player("Hikaru", "Nakamura")
 game1 = [Game(sofiane, kasparov)]
 game2 = [Game(anas, fischer)]
 games = [game1, game2]
@@ -30,18 +31,14 @@ t1.add_players([sofiane, anas, kasparov, fischer])
 r1.add_games(game1)
 r1.add_games(game2)
 r2.add_games(game1)
-t1.serialize_tournament()
+
+Player.serialize_players()
+Tournament.save_tournaments()
+
+#Tournament.deserialize_tournament()
 
 
-dict_player = {
-            "number": "P_1",
-            "first_name": "Sofiane",
-            "last_name": "M.L",
-            "date_of_birth": "22/10/1994",
-            "sex": "M",
-            "rank": 0,
-            "score": 0
-        }
 
-A = Player.deserialize_player(dict_player)
-print(A)
+
+
+

@@ -1,29 +1,17 @@
-from tinydb import TinyDB
 import json
+from pprint import pprint
 
-
-"""
-    def deserialize(cls):
-        pass
-
-        f = open('db.json')
-        data = json.load(f)
-
-        for cle in data.keys():
-            cls_keys_list = [key for key in data[cle]["1"].keys()]
-            for elt in cls_keys_list:
-                elt = data[cle]["1"][elt]
-                return cls(elt)
-        
-        f.close()"""
+from database.db import players_table
 
 
 class Player:
     """Player."""
 
     _id = 0  # An id that we will increment each time we create a new player
+    _player_list = []
 
-    def __init__(self, first_name, last_name, date_of_birth, sex, rank, score):
+
+    def __init__(self, first_name, last_name, date_of_birth="", sex="M", rank=0):
         """Has a  first_name, a family_name,etc."""
         Player._id += 1
         self.number = f"P_{Player._id}"
@@ -32,36 +20,61 @@ class Player:
         self.date_of_birth = date_of_birth
         self.sex = sex
         self.rank = rank
-        self.score = score
+        # Add newly created Player to this list of all players
+        Player._player_list.append(self)
+        Player.serialize_players()
 
     def __str__(self):
         """Used in print."""
-        return f"[{self.first_name} {self.last_name}, {self.score}]"
+        return f"[{self.number}: {self.first_name} {self.last_name}, {self.rank}]"
 
-    def serialize_player(self):
+    @classmethod
+    def get_all_players(cls):
+        return cls._player_list
+
+    @classmethod
+    def get_player_by_id(cls, number):
+        for player in cls._player_list:
+            if player.number == number:
+                return player
+
+        raise ValueError("Player number not existing")
+
+    @classmethod
+    def serialize_players(cls):
         """
         Create a dictionary for Player, so it is ready at the serialization.
         """
-        db = TinyDB("db.json", indent=4)
-        dict_player = vars(self)
-        players_table = db.table("Players")
-        players_table.insert(dict_player)
-        return dict_player
 
-    def deserialize_player(dict_player):
-        first_name = dict_player['first_name']
-        last_name = dict_player['last_name']
-        date_of_birth = dict_player['date_of_birth']
-        sex = dict_player['sex']
-        rank = dict_player['rank']
-        score = dict_player['sex']
-        return Player(first_name=first_name,
-                        last_name=last_name,
-                        date_of_birth=date_of_birth,
-                        sex=sex,
-                        rank=rank,
-                        score=score
-                        )
+        all_players_dicts = []
+        for player in cls._player_list:
+            dict_player = vars(player)
+            all_players_dicts.append(dict_player)
+
+        players_table.truncate()
+        players_table.insert_multiple(all_players_dicts)
+
+    @classmethod
+    def deserialize_players(cls):
+        all_players = players_table.all()
+        for player in all_players:
+            del player["number"]
+            cls(**player)
+
+    @classmethod
+    def deserialize_player(deserialized_player):
+        player = Player(
+            deserialized_player["first_name"],
+            deserialized_player["last_name"],
+            deserialized_player["date_of_birth"],
+            deserialized_player["sex"],
+            deserialized_player["rank"]
+        )
+        return player
+
+
+
+
 
 
 
