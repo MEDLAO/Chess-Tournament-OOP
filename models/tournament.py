@@ -42,6 +42,9 @@ class Tournament:
         """Used in print."""
         return f"Tournament : {self.tournament_name}"
 
+    def __repr__(self):
+        return str(self)
+
     def add_players(self, tournament_players: List[Player]):
         """
         Add a list of Player objects to the tournament

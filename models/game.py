@@ -25,6 +25,9 @@ class Game:
         """Used in print."""
         return f"{self.player_1} vs {self.player_2}"
 
+    def __repr__(self):
+        return str(self)
+
 
     def deserialize_game(self):
         return self

@@ -6,11 +6,11 @@ from tinydb import TinyDB
 import json
 
 
-sofiane = Player("Sofiane", "M.L")
-anas = Player("Anas", "Aamoum")
-kasparov = Player("Garry", "Kasparov")
-fischer = Player("Bobby", "Fischer")
-nakamura = Player("Hikaru", "Nakamura")
+sofiane = Player("Sofiane", "M.L", 0)
+anas = Player("Anas", "Aamoum", 0)
+kasparov = Player("Garry", "Kasparov", 0)
+fischer = Player("Bobby", "Fischer", 0)
+nakamura = Player("Hikaru", "Nakamura", 0)
 game1 = [Game(sofiane, kasparov)]
 game2 = [Game(anas, fischer)]
 games = [game1, game2]

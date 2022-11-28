@@ -11,12 +11,13 @@ class Player:
     _player_list = []
 
 
-    def __init__(self, first_name, last_name, date_of_birth="", sex="M", rank=0):
+    def __init__(self, first_name, last_name, score, date_of_birth="", sex="M", rank=0):
         """Has a  first_name, a family_name,etc."""
         Player._id += 1
         self.number = f"P_{Player._id}"
         self.first_name = first_name
         self.last_name = last_name
+        self.score = score
         self.date_of_birth = date_of_birth
         self.sex = sex
         self.rank = rank
@@ -27,6 +28,9 @@ class Player:
     def __str__(self):
         """Used in print."""
         return f"[{self.number}: {self.first_name} {self.last_name}, {self.rank}]"
+
+    def __repr__(self):
+        return str(self)
 
     @classmethod
     def get_all_players(cls):
@@ -66,6 +70,7 @@ class Player:
         player = Player(
             deserialized_player["first_name"],
             deserialized_player["last_name"],
+            deserialized_player["score"],
             deserialized_player["date_of_birth"],
             deserialized_player["sex"],
             deserialized_player["rank"]

@@ -4,41 +4,55 @@
             "number": "P_1",
             "first_name": "Sofiane",
             "last_name": "M.L",
+            "score": 50,
             "date_of_birth": "",
             "sex": "M",
-            "rank": 0
+            "rank": 1
         },
         "2": {
             "number": "P_2",
             "first_name": "Anas",
             "last_name": "Aamoum",
+            "score": 50,
             "date_of_birth": "",
             "sex": "M",
-            "rank": 0
+            "rank": 2
         },
         "3": {
             "number": "P_3",
             "first_name": "Garry",
             "last_name": "Kasparov",
+            "score": 45,
             "date_of_birth": "",
             "sex": "M",
-            "rank": 0
+            "rank": 3
         },
         "4": {
             "number": "P_4",
-            "first_name": "Bobby",
-            "last_name": "Fischer",
+            "first_name": "Magnus",
+            "last_name": "Carlsen",
+            "score": 37,
             "date_of_birth": "",
             "sex": "M",
-            "rank": 0
+            "rank": 4
         },
         "5": {
             "number": "P_5",
-            "first_name": "Hikaru",
-            "last_name": "Nakamura",
+            "first_name": "Bobby",
+            "last_name": "Fischer",
+            "score": 35,
             "date_of_birth": "",
             "sex": "M",
-            "rank": 0
+            "rank": 5
+        },
+        "6": {
+            "number": "P_6",
+            "first_name": "Hikaru",
+            "last_name": "Nakamura",
+            "score": 35,
+            "date_of_birth": "",
+            "sex": "M",
+            "rank": 6
         }
     },
     "Tournament": {

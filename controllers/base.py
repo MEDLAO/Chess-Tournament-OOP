@@ -10,7 +10,7 @@ NUMBERS_PLAYERS = 8
 class Controller:
     """Main controller."""
 
-    def __init__(self, tournament: Tournament, view):
+    def __init__(self, tournament: Tournament, view=""):
         """Has a Tournament, a list of players and a view."""
         # models
         self.players: List[Player] = []
@@ -30,18 +30,16 @@ class Controller:
 
     def sort_players_rank(self):
         """Sort the players by their ranks."""
-        sorted(self.players, key=lambda player: player.rank)
-        return self.players
+        return sorted(self.players, key=lambda player: player.rank)
 
     def sort_players_score(self):
         """Sort the players by their scores."""
-        sorted(self.players, key=lambda player: player.score)
-        return self.players
+        return sorted(self.players, key=lambda player: player.score)
 
     def generate_pairs_first_round(self):
         """Create pairs for the first round."""
         pairs_first_round = []
-        self.sort_players_rank()
+        self.players = self.sort_players_rank()
         half = len(self.players) // 2
         upper_list = self.players[:half]
         lower_list = self.players[half:]
@@ -49,26 +47,18 @@ class Controller:
             pairs_first_round.append((upper_list[i], lower_list[j]))
         return pairs_first_round
 
+    def update_tournament_players(self):
+        for game in self.tournament.tournament_rounds.games:
+            self.players.pop(self.view.choose_game_winner())
+
     def generate_pairs_next_round(self):
         """Create pairs for the others rounds."""
         pairs_next_rounds = []
-        players_same_scores = []
-        self.sort_players_score()
-        for player in self.players:
-            if self.players.count(player.score) > 1:
-                players_same_scores.append(player)
-                sorted(players_same_scores, key=lambda player: player.rank)
-                players
+        for i in range(len(self.players)-1):
+            if self.players[i].score == self.players[i+1].score:
+                self.sort_players_rank()
             else:
-                return pairs_next_rounds
-
-    def generate_pairs_swiss_rules(self):
-        running = True
-        while running:
-            self.generate_pairs_first_round()
-            self.generate_pairs_next_round()
-
-
+                self.sort_players_score()
 
     def update_scores(self):
         """Update the players scores after each round."""
@@ -76,6 +66,15 @@ class Controller:
         for player in self.players:
             player.score += new_score
         return self.players
+
+    def generate_pairs_swiss_rules(self):
+        running = True
+        while running:
+            self.generate_pairs_first_round()
+            self.update_tournament_players()
+            self.generate_pairs_next_round()
+
+
 
 
 

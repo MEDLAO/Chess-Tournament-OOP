@@ -17,6 +17,9 @@ class Round:
         """Used in print."""
         return f"Round : {self.round_name}"
 
+    def __repr__(self):
+        return str(self)
+
     def add_games(self, games: List[Game]):
         self.games.extend(games)
 
