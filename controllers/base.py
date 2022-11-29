@@ -1,5 +1,6 @@
 """Define the main controller."""
 import random
+from typing import List
 from models.player import Player
 from models.game import Game
 from models.round import Round
@@ -34,10 +35,10 @@ class Controller:
 
     def sort_players_score(self):
         """Sort the players by their scores."""
-        return sorted(self.players, key=lambda player: player.score)
+        return sorted(self.players, key=lambda player: player.score, reverse=True)
 
     def generate_pairs_first_round(self):
-        """Create pairs for the first round."""
+        """Create pairs for the first round (swiss rules)."""
         pairs_first_round = []
         self.players = self.sort_players_rank()
         half = len(self.players) // 2
@@ -52,13 +53,18 @@ class Controller:
             self.players.pop(self.view.choose_game_winner())
 
     def generate_pairs_next_round(self):
-        """Create pairs for the others rounds."""
+        """Create pairs for the others rounds (swiss rules)."""
         pairs_next_rounds = []
-        for i in range(len(self.players)-1):
-            if self.players[i].score == self.players[i+1].score:
-                self.sort_players_rank()
+        list_scores = [player.score for player in self.players]
+        for score in list_scores:
+            if list_scores.count(score) > 1:
+                self.players = self.sort_players_rank()
             else:
-                self.sort_players_score()
+                self.players = self.sort_players_score()
+        for i in range(len(self.players)-1):
+            if (self.players.index(self.players[i]) % 2) == 0:
+                pairs_next_rounds.append((self.players[i], self.players[i+1]))
+        return pairs_next_rounds
 
     def update_scores(self):
         """Update the players scores after each round."""
