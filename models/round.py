@@ -15,7 +15,7 @@ class Round:
 
     def __str__(self):
         """Used in print."""
-        return f"Round : {self.round_name}"
+        return f"Round : {self.round_name}, Start: {self.start_date_time}, End: {self.end_date_time}"
 
     def __repr__(self):
         return str(self)

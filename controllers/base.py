@@ -38,16 +38,7 @@ class Controller:
         round = Round(info)
         self.tournament.tournament_rounds.append(round)
 
-    def generate_pairs_first_round(self):
-        """Create pairs for the first round (swiss rules)."""
-        self.tournament.tournament_rounds[0] = []
-        self.players = sorted(self.players, key=lambda player: player.rank)
-        half = len(self.players) // 2
-        upper_list = self.players[:half]
-        lower_list = self.players[half:]
-        for i, j in zip(range(len(upper_list)), range(len(lower_list))):
-            self.tournament.tournament_rounds[0].append(Game(upper_list[i], lower_list[j]))
-        return self.tournament.tournament_rounds[0]
+
 
     def players_for_next_round(self):
         """Create list of the winners."""

@@ -1,11 +1,8 @@
-import json
-from pprint import pprint
 from typing import List
-from database.db import players_table
+from datetime import date
 from database.db import tournament_table
 from models.player import Player
 from models.round import Round
-from tinydb import TinyDB
 
 class Tournament:
     """Setup of a tournament."""
@@ -16,10 +13,10 @@ class Tournament:
     def __init__(self,
                  tournament_name,
                  tournament_place,
-                 tournament_start_date,
-                 tournament_end_date,
-                 time_control,
                  description,
+                 tournament_start_date=str(date.today()),
+                 tournament_end_date="",
+                 time_control="Blitz",
                  number_rounds=4,
                  tournament_players=[],
                  tournament_rounds=[]
@@ -37,10 +34,12 @@ class Tournament:
         self.tournament_rounds = tournament_rounds
 
         Tournament._tournaments_list.append(self)
+        # Save newly added tournament in the database
+        # Tournament.save_tournaments()
 
     def __str__(self):
         """Used in print."""
-        return f"Tournament : {self.tournament_name}"
+        return f"Tournament : {self.tournament_name}, Start: {self.tournament_start_date}, End: {self.tournament_end_date}"
 
     def __repr__(self):
         return str(self)
@@ -97,7 +96,17 @@ class Tournament:
 
         return cls._tournaments_list
 
+    @classmethod
+    def get_all_tournaments(cls):
+        return cls._tournaments_list
 
+    @classmethod
+    def get_tournament_by_id(cls, t_id: str):
+        for tournament in cls._tournaments_list:
+            if str(tournament.tournament_id) == t_id:
+                return tournament
+
+        raise ValueError(f"Tournament id {t_id} not existing")
 
 
 

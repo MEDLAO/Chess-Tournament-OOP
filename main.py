@@ -1,34 +1,48 @@
 from models.player import Player
 from models.tournament import Tournament
-
-# Load players from the database
-Player.deserialize_players()
-print("My all players:")
-for player in Player.get_all_players():
-    print(player)
-print("-------------------------")
-all_ts = Tournament.deserialize_tournaments()
-t1 = all_ts[0]
-print(t1)
-for player in t1.tournament_players:
-    print(player)
-print("-------------------------")
-for round in t1.tournament_rounds:
-    print("-------------------------")
-    print(round)
-
-    for game in round.games:
-        print(game)
+from views.player import PlayerView
+from views.tournament import TournamentView
 
 
-# print("Ajouter un joueur:")
-# fn = input("First Name: ")
-# ln = input("Last Name: ")
-# Player(first_name=fn, last_name=ln)
-#
-# print("-------------------------")
-# print("My all players:")
-# for player in Player.get_all_players():
-#     print(player)
+# 1st step: Load data from the database.
+
+Player.deserialize_players()  # Load players from the database
+Tournament.deserialize_tournaments()  # Load players from the database
+
+
+print("#############################")
+print("### Welcome to chess soft ###")
+print("#############################")
+print("Load Complete!")
+while True:
+    print("\n")
+    print("What do you want to do?")
+    print("1 - Show players")
+    print("2 - Add a player")
+    print("3 - Show tournaments")
+    print("4 - Add a tournament")
+    print("5 - Access tournament")
+    print("0 - Close program")
+    choice = input("Choose an option: ")
+    if choice == "1":
+        # The view to show all players
+        PlayerView.print_all()
+    elif choice == "2":
+        # The view to add a player
+        PlayerView.add_player()
+    elif choice == "3":
+        # The view to show all tournaments
+        TournamentView.print_all()
+    elif choice == "4":
+        # The view to add a tournament
+        TournamentView.add_tournament()
+    elif choice == "5":
+        TournamentView.access_tournament()
+
+    elif choice == "0":
+        print("Good Bye")
+        break
+    else:
+        print("Wrong choice. Please choose a correct option")
 
 
