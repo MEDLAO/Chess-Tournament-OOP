@@ -5,7 +5,7 @@ from database.db import tournament_table
 class Round:
     """Round."""
 
-    def __init__(self, round_name, start_date_time, end_date_time, number):
+    def __init__(self, round_name, start_date_time="", end_date_time="", number=""):
         """Has a name, start/end date and time."""
         self.round_name = round_name
         self.start_date_time = start_date_time

@@ -2,57 +2,67 @@
     "Players": {
         "1": {
             "number": "P_1",
-            "first_name": "Sofiane",
-            "last_name": "M.L",
-            "score": 50,
+            "first_name": [
+                "a",
+                "a",
+                "a",
+                "a",
+                "a",
+                "a"
+            ],
+            "last_name": "",
+            "score": 0,
             "date_of_birth": "",
             "sex": "M",
-            "rank": 1
+            "rank": 0
         },
         "2": {
             "number": "P_2",
-            "first_name": "Anas",
-            "last_name": "Aamoum",
-            "score": 50,
+            "first_name": [
+                "b",
+                "b",
+                "b",
+                "b",
+                "b",
+                "b"
+            ],
+            "last_name": "",
+            "score": 0,
             "date_of_birth": "",
             "sex": "M",
-            "rank": 2
+            "rank": 0
         },
         "3": {
             "number": "P_3",
-            "first_name": "Garry",
-            "last_name": "Kasparov",
-            "score": 45,
+            "first_name": [
+                "c",
+                "c",
+                "c",
+                "c",
+                "c",
+                "c"
+            ],
+            "last_name": "",
+            "score": 0,
             "date_of_birth": "",
             "sex": "M",
-            "rank": 3
+            "rank": 0
         },
         "4": {
             "number": "P_4",
-            "first_name": "Magnus",
-            "last_name": "Carlsen",
-            "score": 37,
+            "first_name": [
+                "d",
+                "d",
+                "d",
+                "d",
+                "d",
+                "d"
+            ],
+            "last_name": "",
+            "score": 0,
             "date_of_birth": "",
             "sex": "M",
-            "rank": 4
-        },
-        "5": {
-            "number": "P_5",
-            "first_name": "Bobby",
-            "last_name": "Fischer",
-            "score": 35,
-            "date_of_birth": "",
-            "sex": "M",
-            "rank": 5
-        },
-        "6": {
-            "number": "P_6",
-            "first_name": "Hikaru",
-            "last_name": "Nakamura",
-            "score": 35,
-            "date_of_birth": "",
-            "sex": "M",
-            "rank": 6
+            "rank": 0
         }
     },
     "Tournament": {

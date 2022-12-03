@@ -11,7 +11,7 @@ class Player:
     _player_list = []
 
 
-    def __init__(self, first_name, last_name, score, date_of_birth="", sex="M", rank=0):
+    def __init__(self, first_name, last_name="", score=0, date_of_birth="", sex="M", rank=0):
         """Has a  first_name, a family_name,etc."""
         Player._id += 1
         self.number = f"P_{Player._id}"
@@ -27,7 +27,7 @@ class Player:
 
     def __str__(self):
         """Used in print."""
-        return f"[{self.number}: {self.first_name} {self.last_name}, {self.rank}]"
+        return f"[{self.number}: {self.first_name} {self.last_name}, {self.rank}, {self.score}]"
 
     def __repr__(self):
         return str(self)
