@@ -1,0 +1,318 @@
+{
+    "Players": {
+        "1": {
+            "number": "P_1",
+            "first_name": "Jose Raul",
+            "last_name": "Capablanca",
+            "date_of_birth": "",
+            "sex": "M",
+            "rank": 1625
+        },
+        "2": {
+            "number": "P_2",
+            "first_name": "Magnus",
+            "last_name": "Carlsen",
+            "date_of_birth": "",
+            "sex": "M",
+            "rank": 1500
+        },
+        "3": {
+            "number": "P_3",
+            "first_name": "Bobby",
+            "last_name": "Fischer",
+            "date_of_birth": "",
+            "sex": "M",
+            "rank": 1700
+        },
+        "4": {
+            "number": "P_4",
+            "first_name": "Gary",
+            "last_name": "Kasparov",
+            "date_of_birth": "",
+            "sex": "M",
+            "rank": 1867
+        },
+        "5": {
+            "number": "P_5",
+            "first_name": "Paul",
+            "last_name": "Morphy",
+            "date_of_birth": "",
+            "sex": "M",
+            "rank": 1000
+        },
+        "6": {
+            "number": "P_6",
+            "first_name": "Hikaru",
+            "last_name": "Nakamura",
+            "date_of_birth": "",
+            "sex": "M",
+            "rank": 780
+        },
+        "7": {
+            "number": "P_7",
+            "first_name": "Mikhail",
+            "last_name": "Tal",
+            "date_of_birth": "",
+            "sex": "",
+            "rank": 2200
+        }
+    },
+    "Tournament": {
+        "1": {
+            "tournament_id": 1,
+            "tournament_name": "Championnat du monde d'\u00e9checs.",
+            "tournament_place": "Paris",
+            "time_control": "BULLET",
+            "description": "Ce tournoi a lieu tous les 3 ans, il r\u00e9unit les meilleurs joueurs de la plan\u00e8te...",
+            "number_rounds": 3,
+            "tournament_start_date": "2022-12-30 20:57:04",
+            "tournament_end_date": "",
+            "tournament_players": [
+                "P_2",
+                "P_1",
+                "P_5",
+                "P_6"
+            ],
+            "tournament_participants": {
+                "P_5": 1.5,
+                "P_6": 0,
+                "P_2": 1.5,
+                "P_1": 1.0
+            },
+            "tournament_rounds": [
+                {
+                    "round_name": "R1",
+                    "start_date_time": "2022-12-30 20:57:04",
+                    "end_date_time": "2022-12-30 21:48:23",
+                    "number": "",
+                    "games": [
+                        {
+                            "player_1": "P_5",
+                            "player_2": "P_1",
+                            "winner_game": "DRAW"
+                        },
+                        {
+                            "player_1": "P_2",
+                            "player_2": "P_6",
+                            "winner_game": "P_2"
+                        }
+                    ]
+                },
+                {
+                    "round_name": "R2",
+                    "start_date_time": "2022-12-30 21:54:03",
+                    "end_date_time": "2022-12-30 21:54:45",
+                    "number": "",
+                    "games": [
+                        {
+                            "player_1": "P_2",
+                            "player_2": "P_1",
+                            "winner_game": "DRAW"
+                        },
+                        {
+                            "player_1": "P_5",
+                            "player_2": "P_6",
+                            "winner_game": "P_5"
+                        }
+                    ]
+                },
+                {
+                    "round_name": "R3",
+                    "start_date_time": "",
+                    "end_date_time": "",
+                    "number": "",
+                    "games": []
+                }
+            ]
+        },
+        "2": {
+            "tournament_id": 2,
+            "tournament_name": "Tournoi des candidats",
+            "tournament_place": "Kuala Lumpur",
+            "time_control": "BLITZ",
+            "description": "Au jeu d'\u00e9checs, le tournoi des candidats est l'\u00e9tape finale de...",
+            "number_rounds": 5,
+            "tournament_start_date": "2022-12-30 22:15:00",
+            "tournament_end_date": "",
+            "tournament_players": [
+                "P_1",
+                "P_6",
+                "P_2",
+                "P_5",
+                "P_3",
+                "P_4"
+            ],
+            "tournament_participants": {
+                "P_6": 2.0,
+                "P_5": 1.5,
+                "P_4": 0.5,
+                "P_2": 2.0,
+                "P_1": 2.5,
+                "P_3": 0.5
+            },
+            "tournament_rounds": [
+                {
+                    "round_name": "R1",
+                    "start_date_time": "2022-12-30 22:15:00",
+                    "end_date_time": "2023-01-02 09:24:20",
+                    "number": "",
+                    "games": [
+                        {
+                            "player_1": "P_5",
+                            "player_2": "P_1",
+                            "winner_game": "DRAW"
+                        },
+                        {
+                            "player_1": "P_4",
+                            "player_2": "P_3",
+                            "winner_game": "DRAW"
+                        },
+                        {
+                            "player_1": "P_2",
+                            "player_2": "P_6",
+                            "winner_game": "DRAW"
+                        }
+                    ]
+                },
+                {
+                    "round_name": "R2",
+                    "start_date_time": "2023-01-02 09:29:42",
+                    "end_date_time": "2023-01-02 09:30:03",
+                    "number": "",
+                    "games": [
+                        {
+                            "player_1": "P_6",
+                            "player_2": "P_4",
+                            "winner_game": "P_6"
+                        },
+                        {
+                            "player_1": "P_2",
+                            "player_2": "P_3",
+                            "winner_game": "P_2"
+                        },
+                        {
+                            "player_1": "P_1",
+                            "player_2": "P_5",
+                            "winner_game": "P_1"
+                        }
+                    ]
+                },
+                {
+                    "round_name": "R3",
+                    "start_date_time": "2023-01-02 10:03:23",
+                    "end_date_time": "2023-01-02 10:23:14",
+                    "number": "",
+                    "games": [
+                        {
+                            "player_1": "P_6",
+                            "player_2": "P_2",
+                            "winner_game": "DRAW"
+                        },
+                        {
+                            "player_1": "P_1",
+                            "player_2": "P_4",
+                            "winner_game": "P_1"
+                        },
+                        {
+                            "player_1": "P_3",
+                            "player_2": "P_5",
+                            "winner_game": "P_5"
+                        }
+                    ]
+                },
+                {
+                    "round_name": "R4",
+                    "start_date_time": "",
+                    "end_date_time": "",
+                    "number": "",
+                    "games": []
+                },
+                {
+                    "round_name": "R5",
+                    "start_date_time": "",
+                    "end_date_time": "",
+                    "number": "",
+                    "games": []
+                }
+            ]
+        },
+        "3": {
+            "tournament_id": 3,
+            "tournament_name": "Olympiade d'\u00e9checs",
+            "tournament_place": "Moscou",
+            "time_control": "COUP_RAPIDE",
+            "description": "Depuis 1950, toutes les ann\u00e9es paires, est organis\u00e9e par la F\u00e9d\u00e9ra...",
+            "number_rounds": 3,
+            "tournament_start_date": "2022-12-30 23:14:08",
+            "tournament_end_date": "2022-12-30 23:26:32",
+            "tournament_players": [
+                "P_4",
+                "P_6",
+                "P_3",
+                "P_5"
+            ],
+            "tournament_participants": {
+                "P_4": 3.5,
+                "P_6": 1.5,
+                "P_5": 1.0,
+                "P_3": 2.0
+            },
+            "tournament_rounds": [
+                {
+                    "round_name": "R1",
+                    "start_date_time": "2022-12-30 23:14:08",
+                    "end_date_time": "2022-12-30 23:17:47",
+                    "number": "",
+                    "games": [
+                        {
+                            "player_1": "P_5",
+                            "player_2": "P_3",
+                            "winner_game": "DRAW"
+                        },
+                        {
+                            "player_1": "P_4",
+                            "player_2": "P_6",
+                            "winner_game": "P_4"
+                        }
+                    ]
+                },
+                {
+                    "round_name": "R2",
+                    "start_date_time": "2022-12-30 23:17:52",
+                    "end_date_time": "2022-12-30 23:18:04",
+                    "number": "",
+                    "games": [
+                        {
+                            "player_1": "P_4",
+                            "player_2": "P_3",
+                            "winner_game": "P_4"
+                        },
+                        {
+                            "player_1": "P_5",
+                            "player_2": "P_6",
+                            "winner_game": "P_6"
+                        }
+                    ]
+                },
+                {
+                    "round_name": "R3",
+                    "start_date_time": "2022-12-30 23:26:04",
+                    "end_date_time": "2022-12-30 23:26:32",
+                    "number": "",
+                    "games": [
+                        {
+                            "player_1": "P_4",
+                            "player_2": "P_5",
+                            "winner_game": "P_4"
+                        },
+                        {
+                            "player_1": "P_6",
+                            "player_2": "P_3",
+                            "winner_game": "P_3"
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}
