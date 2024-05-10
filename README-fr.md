@@ -1,6 +1,9 @@
 ## Projet : Développez un programme logiciel en Python
 
 [**English**](README.md)
+<p>
+  <img src="Pictures/Chess-Tournament-OOP.png" />
+</p>
 
 ### Tables des matières :
 1. Description générale du projet.
