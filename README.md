@@ -1,4 +1,10 @@
 ## Project : Develop a software program in Python
+
+[**Français**](README-fr.md)
+<p>
+  <img src="Pictures/Chess-Tournament-OOP.png" />
+</p>
+
 ### Table of contents :
 1. Project description.
 2. Compatible configurations.

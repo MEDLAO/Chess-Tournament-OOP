@@ -1,4 +1,7 @@
 ## Projet : Développez un programme logiciel en Python
+
+[**English**](README.md)
+
 ### Tables des matières :
 1. Description générale du projet.
 2. Configurations compatibles.
