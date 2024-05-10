@@ -1,30 +1,28 @@
-## Projet : Développez un programme logiciel en Python
-### Tables des matières :
-1. Description générale du projet.
-2. Configurations compatibles.
-3. Installation du programme.
-4. Fonctionnalités.
-5. Démarrage du programme.
+## Project : Develop a software program in Python
+### Table of contents :
+1. Project description.
+2. Compatible configurations.
+3. Installing the program.
+4. Features.
+5. Running the program.
 
-## 1. Descripton générale du projet :
+## 1. Project description :
 
-Ce projet a été réalisé dans le cadre de la formation de
-développeur Python proposée par OpenClassrooms. Le thème principal étant
-la programmation orientée objet : P.O.O,
-l'objectif de ce projet est de coder une "application" de gestion de tournoi d'échecs
-tout en utilisant le design pattern M.V.C (Model View Controller).
-De plus, le logiciel fonctionne hors ligne et permet de sauvegarder les données relatives aux joueurs
-et aux tournois dans une base de données.
+This project was carried out as part of the Python Developer training offered by OpenClassrooms.
+The main topic being object-oriented programming: O.O.P,
+the objective of this project is to code a chess tournament management "application"
+while using the M.V.C (Model View Controller) design pattern.
+Moreover, the software works offline and saves player and tournament data in a database.
 
-## 2. Configurations compatibles :
+## 2. Compatible configurations :
 
 * Python 3
 * Windows 10
 * Mac
 * Linux
 
-## 3. Installation du programme :
-Ce programme utilise les librairies Python suivantes :
+## 3. Installing the program :
+This program uses the following Python libraries :
 
 ```
 flake8 6.0.0
@@ -40,36 +38,37 @@ tinydb 4.7.0
 wcwidth 0.2.5
 ```
 
-## 4. Fonctionnalités :
+## 4. Features :
 
-### *Fonctionnalité 1* : Afficher les **joueurs**
-  * 1.1 : Afficher tous les joueurs présents dans la **base de données**.
-  * 1.2 : Afficher les joueurs d'un **tournoi**.
-### *Fonctionnalité 2* : **Ajouter** un joueur.
-### *Fonctionnalité 3* : **Modifier le classement** d'un ou de plusieurs joueurs.
-### *Fonctionnalité 4* : **Afficher tous les tournois** sauvegardés dans la base de données.
-  * 4.1 : Ajouter un tournoi.
-  * 4.2 : Accéder à un tournoi.
-    * 4.2.1 : **Terminer un tour** (afin d'indiquer le **gagnant** de chaque **partie**).
-    * 4.2.2 : Accéder au **tour suivant**.
-    * 4.2.3 : **Modifier** le classement des joueurs (lorsque le tournoi est terminé).
-    * 4.2.4 : Afficher le **score** actuel.
+### *Feature 1* : Show the **players**
+  * 1.1 : Show all players present in the **database**.
+  * 1.2 : Show players in a **tournament**.
+### *Feature 2* : **Add** a player.
+### *Feature 3* : **Modify the ranking** of one or more players.
+### *Feature 4* : **Show all tournaments** saved in the database.
+  * 4.1 : Add a tournament.
+  * 4.2 : Access a tournament.
+    * 4.2.1 : **End a round** (to indicate the **winner** of each **game**).
+    * 4.2.2 : Access the **next round**.
+    * 4.2.3 : **Modify** player rankings (when tournament is over).
+    * 4.2.4 : Show current **score**.
     
-## 5. Démarrage du programme :
+## 5. Running the program :
 
-1. Ouvrir un terminal (ex: Cygwin pour Windows, le terminal pour Mac) ou dans un IDE (ex: PyCharm).
-2. Télécharger le dossier contenant le projet puis se placer dans ce dossier sur le terminal.
-3. Créer un environnement virtuel avec :
+1. Open a terminal (e.g., Cygwin for Windows, the Terminal for Mac) or in an IDE (e.g., PyCharm).
+2. Download the folder containing the project then go in this folder on the terminal.
+3. Create a virtual environment with :
   > $<b> python -m venv <nom de l'environnement></b> 
-4. Activer l'environnement virtuel en éxécutant :
+4. Activate the virtual environment via :
   > $ <b>source env/bin/activate</b>  (sur Mac) 
 
   > $ <b>env/Scripts/activate.bat</b> (sur Windows)
-5. Installer les paquets présents dans le fichier (ce fichier se trouve dans le dossier du projet avec main.py) requirements.txt avec :
+5. Install the packages present in the requirements.txt file (this file is located in the project
+folder with main.py) with:
   > $ <b>pip install -r requirements.txt</b> 
-6. Finalement, lancer le script avec
+6. Finally, run the script with :
 > $ <b>python main.py</b>
-7. Pour générer un nouveau rapport flake8 :
+7. To generate a new flake8 report :
 > $ <b>flake8 --format=html --htmldir=flake8-rapport</b>
 
 

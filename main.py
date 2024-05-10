@@ -25,7 +25,7 @@ while True:
     choice = input("Choose an option: ")
     if choice == "1":
         # The view to show all players
-        if Player._player_list == []:
+        if len(Player._player_list) == 0:
             print("//No players in the database//")
         else:
             PlayerView.show_menu_players()
