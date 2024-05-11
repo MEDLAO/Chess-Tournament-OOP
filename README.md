@@ -66,9 +66,9 @@ wcwidth 0.2.5
 3. Create a virtual environment with :
   > $<b> python -m venv <nom de l'environnement></b> 
 4. Activate the virtual environment via :
-  > $ <b>source env/bin/activate</b>  (sur Mac) 
+  > $ <b>source env/bin/activate</b>  (on Mac) 
 
-  > $ <b>env/Scripts/activate.bat</b> (sur Windows)
+  > $ <b>env/Scripts/activate.bat</b> (on Windows)
 5. Install the packages present in the requirements.txt file (this file is located in the project
 folder with main.py) with:
   > $ <b>pip install -r requirements.txt</b> 
