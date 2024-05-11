@@ -2,7 +2,7 @@
 
 [**Français**](README-fr.md)
 <p>
-  <img src="Pictures/Chess-Tournament-OOP.png" />
+  <img src="pictures/Chess-Tournament-OOP.png" />
 </p>
 
 ### Table of contents :
