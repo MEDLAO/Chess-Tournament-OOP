@@ -69,7 +69,7 @@ wcwidth 0.2.5
   > $ <b>source env/bin/activate</b>  (on Mac) 
 
   > $ <b>env/Scripts/activate.bat</b> (on Windows)
-5. Install the packages present in the requirements.txt file (this file is located in the project
+5. Install the packages present in requirements.txt file (this file is located in the project
 folder with main.py) with:
   > $ <b>pip install -r requirements.txt</b> 
 6. Finally, run the script with :
